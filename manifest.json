@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+
+    "name": "zilk",
+    "version": "0.1",
+
+    "permissions": [
+        "https://www.facebook.com/"
+    ],
+    
+    "content_scripts": [
+        {
+            "matches": ["https://www.facebook.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
