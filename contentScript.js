@@ -5,8 +5,7 @@ function main() {
         var wrapper = wrapperList[i];
         
         try{
-            var userContent = wrapper.getElementsByClassName("userContent")[0];
-            var message = userContent.firstChild.innerHTML;
+            var message = wrapper.innerHTML;
 
             if(shouldCensor(message)) {
                 censor(wrapper);
