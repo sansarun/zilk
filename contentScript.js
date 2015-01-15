@@ -1,17 +1,11 @@
 function main() {
-    var wrapperList = document.querySelectorAll(".userContentWrapper");
+    var postArray = document.querySelectorAll("[data-insertion-position]");
 
-    for(var i=0; i < wrapperList.length; i++) {
-        var wrapper = wrapperList[i];
-        
-        try{
-            var message = wrapper.innerHTML;
+    for(var i=0; i < postArray.length; i++) {
+        var post = postArray[i];
 
-            if(shouldCensor(message)) {
-                censor(wrapper);
-            }
-        } catch(e) {
-            console.error(e);
+        if(shouldCensor(post.innerHTML)) {
+            censor(post.childNodes[0]);
         }
     }
 } 
