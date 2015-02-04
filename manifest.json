@@ -5,6 +5,7 @@
     "version": "0.1",
 
     "permissions": [
+        "storage",
         "https://www.facebook.com/"
     ],
     
@@ -13,5 +14,11 @@
             "matches": ["https://www.facebook.com/*"],
             "js": ["contentScript.js"]
         }
-    ]
+    ],
+
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_title": "Zilk",
+        "default_popup": "popup.html"
+    }
 }
